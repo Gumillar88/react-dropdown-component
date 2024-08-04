@@ -1,0 +1,101 @@
+/* src/components/Dropdown.css */
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  color: #333;
+  box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* Adjusts the menu to start directly below the toggle */
+  left: 0;
+  width: calc(100% - 2px); /* Adjust for border width */
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  z-index: 1000; /* Ensure dropdown is above other content */
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
+}
+
+.dropdown-option {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-option:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-option.selected {
+  background-color: #4a4a4a; /* Dark gray background */
+  color: #fff; /* White text */
+  border: 1px solid #4a4a4a; /* Dark gray border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0.5rem 1rem; /* Consistent padding */
+  margin: 0.25rem 0.25rem; /* Margin between selected options */
+  display: inline-flex; /* Display as inline-flex to show as button-like */
+  align-items: center; /* Align items vertically */
+}
+
+.dropdown-search {
+  width: calc(100% - 2px); /* Adjust for border width */
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.highlight {
+  background-color: #4a4a4a; /* Dark gray */
+  color: #fff; /* White text */
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  display: inline-block;
+  margin: 0.2rem;
+}
+
+.selected-item {
+  display: flex;
+  align-items: center;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #4a4a4a;
+  border-radius: 4px;
+  background-color: #4a4a4a;
+  color: #fff;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.remove-btn:hover {
+  color: #ff0000; /* Optional: Change color on hover */
+}
